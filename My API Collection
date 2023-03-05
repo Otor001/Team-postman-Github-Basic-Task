@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "ee656959-468c-4dc6-9dfe-a9bb435bc05e",
+		"name": "My API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26187350"
+	},
+	"item": [
+		{
+			"name": "https://petstore.swagger.io/v2/swagger.json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/swagger.json",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"swagger.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
